@@ -48,6 +48,7 @@ class Session {
             self::destroy();
             header("Location: login.php");
         }
+
     }
 
     public static function checkLogin()
@@ -57,6 +58,7 @@ class Session {
         {
             header("Location:index.php");
         }
+
     }
 
 //    Xoa/Huy phien lam viec do

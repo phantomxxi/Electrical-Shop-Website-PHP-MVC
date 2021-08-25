@@ -14,6 +14,7 @@
 ?>
 
 
+
 <!DOCTYPE html>
 <head>
 <meta charset="utf-8">
@@ -31,6 +32,7 @@
                     echo $login_check;
                 }
                 ?></span>
+
 			<div>
 				<input type="text" placeholder="Username" required="" name="adminUser"/>
 			</div>
