@@ -1,4 +1,7 @@
 <?php
+include '../config/config.php';
+?>
+<?php
 
 // Link Tham khao PHP-MySQLi Connection:
 // https://gist.github.com/tanzilhuda/f3b11348343376ae41f710793593cc1b
