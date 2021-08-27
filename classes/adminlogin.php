@@ -41,7 +41,7 @@ class adminlogin
                 $value = $result->fetch_assoc();
                 Session::set('adminlogin',true);
 //                Set gia tri value cho cac tieu de
-                Session::set('adminid',$value['adminid']);
+                Session::set('adminId',$value['adminId']);
                 Session::set('adminUser',$value['adminUser']);
                 Session::set('adminName',$value['adminName']);
 //                Neu nhap user va pass dung thi huong chi muc ve index.php

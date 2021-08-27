@@ -37,6 +37,7 @@ class Session {
         {
             return false;
         }
+
     }
 
 // Check phien lam viec co ton tai hay ko
@@ -48,6 +49,7 @@ class Session {
             self::destroy();
             header("Location: login.php");
         }
+
 
     }
 
