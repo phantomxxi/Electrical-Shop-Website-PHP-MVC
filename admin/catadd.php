@@ -13,12 +13,12 @@
         <div class="grid_10">
             <div class="box round first grid">
                 <h2>Thêm danh mục</h2>
-                <?php
-                if(isset($insertCat)){
-                    echo $insertCat;
-                }
-                ?>
-               <div class="block copyblock"> 
+               <div class="block copyblock">
+                   <?php
+                   if(isset($insertCat)){
+                       echo $insertCat;
+                   }
+                   ?>
                  <form action="catadd.php" method="post">
                     <table class="form">					
                         <tr>

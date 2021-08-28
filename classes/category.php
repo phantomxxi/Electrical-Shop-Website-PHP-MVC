@@ -82,7 +82,7 @@ class category
 
     public function del_category($id)
     {
-        $query = "DELETE * FROM tbl_category WHERE catId = '$id'";
+        $query = "DELETE  FROM tbl_category WHERE catId = '$id'";
         $result = $this->db->delete($query);
         if ($result){
             $alert = "<span class='success'>Delete Category Sucessfully</span>";
