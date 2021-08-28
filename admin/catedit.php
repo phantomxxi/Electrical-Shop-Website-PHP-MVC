@@ -32,7 +32,7 @@
                     <table class="form">
                         <tr>
                             <td>
-                                    <input type="text" value="<?php print $result['catName']?>" name="catName" placeholder="Sửa danh mục sản phẩm..." class="medium" />
+                                    <input type="text" value="<?php print json_encode($result['catName'])?>" name="catName" placeholder="Sửa danh mục sản phẩm..." class="medium" />
                             </td>
                         </tr>
                         <tr>
