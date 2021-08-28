@@ -42,14 +42,60 @@ class category
                 $alert = "<span class='error'>Insert Category Not Sucessfully</span>";
                 return $alert;
             }
-
-
         }
     }
 
     public function show_category()
     {
         $query = "SELECT * FROM tbl_category ORDER BY catId desc ";
+        $result = $this->db->select($query);
+        return $result;
+    }
+
+    public function update_category($catName, $id)
+    {
+        $catName = $this->fm->validation($catName);
+//       hàm để xử lý các biến trước khi đưa vào câu query dùng để bảo mật/ bảo vệ website
+        $catName = mysqli_real_escape_string($this->db->link, $catName);
+        $id = mysqli_real_escape_string($this->db->link, $id);
+
+        if (empty($catName))
+        {
+            $alert = "<span class='error'>Category must be not empty</span>";
+            return $alert;
+        } else
+        {
+            $query = "UPDATE tbl_category SET catName = '$catName' WHERE catId = '$id'";
+            $result = $this->db->update($query);
+
+            if ($result)
+            {
+                $alert = "<span class='success'>Update Category Sucessfully</span>";
+                return $alert;
+            }else
+            {
+                $alert = "<span class='error'>Update Category Not Sucessfully</span>";
+                return $alert;
+            }
+        }
+    }
+
+    public function del_category($id)
+    {
+        $query = "DELETE * FROM tbl_category WHERE catId = '$id'";
+        $result = $this->db->delete($query);
+        if ($result){
+            $alert = "<span class='success'>Delete Category Sucessfully</span>";
+            return $alert;
+        }else{
+            $alert = "<span class='error'>Delete Category Not Sucessfully</span>";
+            return $alert;
+        }
+    }
+
+    public function getcatbyId($id)
+    {
+        $query = "SELECT * FROM tbl_category WHERE catId = '$id'";
         $result = $this->db->select($query);
         return $result;
     }
